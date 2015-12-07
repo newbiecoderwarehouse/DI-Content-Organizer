@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @typography.title %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @typography.url %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @typography.source %>
+</p>
+
+<%= link_to 'Edit', edit_typography_path(@typography) %> |
+<%= link_to 'Back', typographies_path %>

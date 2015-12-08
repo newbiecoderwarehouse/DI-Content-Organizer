@@ -1,14 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Typographies</h1>
-<small><%= @content %></small>
 <table>
   <thead>
     <tr>
-      <% @content.each do |t| %>
-      <td><%= t["title"] %></td>
-      <td><%= t["link"] %></td>
-      <td><%= t["source"] %></td>
+      <% @typographies.each do |t| %>
+      <td><%= t.title %></td>
+      <td><%= t.url %></td>
+      <td><%= t.source %></td>
       <th colspan="3"></th>
     </tr>
   </thead>

@@ -1,4 +1,3 @@
- require 'open-uri'
  class TypographiesController < ApplicationController 
   before_action :set_typography, only: [:show, :edit, :update, :destroy]
 
@@ -6,7 +5,6 @@
   # GET /typographies.json
   def index
     @typographies = Typography.all
-    get_data
   end
 
   # GET /typographies/1

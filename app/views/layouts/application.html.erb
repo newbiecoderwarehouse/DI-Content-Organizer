@@ -8,7 +8,17 @@
 </head>
 <body>
 
-<%= yield %>
-
+ <%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <% if user_signed_in? %>
+    <%= link_to "typography", typographies_path %><br/>
+    <%= link_to "sign_out", sign_out_path,  method: "delete"%>
+  <% else %>
+    <%= link_to "sign_in", sign_in_path %>
+    <%= link_to "sign_up", sign_up_path %>
+  <%end %> 
+ 
+  <%= debug(params) if Rails.env.development? %>
 </body>
 </html>

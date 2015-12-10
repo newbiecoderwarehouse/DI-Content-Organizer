@@ -5,6 +5,8 @@
   # GET /typographies.json
   def index
     @typographies = Typography.all
+    @approved_typographies = Typography.where(include: "yes")
+    @unapproved_typographies = Typography.where(include: "no")
   end
 
   # GET /typographies/1
@@ -69,6 +71,6 @@
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def typography_params
-      params.require(:typography).permit(:title, :url, :source)
+      params.require(:typography).permit(:title, :url, :source, :include)
     end
-  end
+ end

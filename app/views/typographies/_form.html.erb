@@ -23,6 +23,11 @@
     <%= f.label :source %><br>
     <%= f.text_field :source %>
   </div>
+  <div class="field">
+  <%= f.label :include %><br>
+  <%= f.check_box :include, {}, "yes", "no" %>
+</div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

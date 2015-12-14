@@ -16,7 +16,8 @@
 
   # GET /typographies/new
   def new
-    @typography = Typography.new
+    @typography = current_user.typographies.build
+    # @typography = Typography.new
   end
 
   # GET /typographies/1/edit
@@ -26,7 +27,8 @@
   # POST /typographies
   # POST /typographies.json
   def create
-    @typography = Typography.new(typography_params)
+    @typography = current_user.typographies.build(typography_params)
+    # @typography = Typography.new(typography_params)
 
     respond_to do |format|
       if @typography.save

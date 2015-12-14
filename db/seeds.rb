@@ -3,5 +3,5 @@ url = open("http://newbiecoderwarehouse.github.io/design-inspiration-api/apis/ty
 json_data = JSON.parse(url)
 @content = json_data["results"]
 @content.each do |x|
-  Typography.create!(:title => x["title"], :url => x["link"], :source => x["source"])
+  Typography.create!(:title => x["title"], :url => x["link"], :source => x["source"], :user_id => 1)
 end

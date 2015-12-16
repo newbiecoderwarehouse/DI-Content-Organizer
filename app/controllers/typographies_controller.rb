@@ -7,6 +7,7 @@
     @typographies = Typography.all
     @approved_typographies = Typography.where(include: "yes")
     @unapproved_typographies = Typography.where(include: "no")
+    @current_user = current_user
   end
 
   # GET /typographies/1

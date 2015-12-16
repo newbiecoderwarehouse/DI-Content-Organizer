@@ -13,6 +13,10 @@
       <td><img src= "<%= t.url %>" width="150" height="150" /></td>
       <td><%= t.source %></td>
       <td>Included:<%= t.include %></td>
+      <%if @current_user.admin? %>
+      <td><%= link_to 'Edit', edit_typography_path(t) %></td> 
+      <td><%= link_to 'Destroy', t, method: :delete, data: { confirm: 'Are you sure?' } %></td     
+      <% end %>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,20 +25,22 @@
 </table>
 
 <br>
+<%if @current_user.admin? %>
+    
+  <h1>Listing Approved</h1>
+      <ul>
+        <% @approved_typographies.each do |t| %>
+        <li><%= t.title %></li>
+    <% end %>
+      </ul>
 
-<h1>Listing Approved</h1>
-    <ul>
-      <% @approved_typographies.each do |t| %>
-      <li><%= t.title %></li>
-  <% end %>
+  <h1>Listing Unapproved</h1>
+      <ul>
+        <% @unapproved_typographies.each do |t| %>
+        <li><%= t.title %></li>
+    <% end %>
     </ul>
-
-<h1>Listing Unapproved</h1>
-    <ul>
-      <% @unapproved_typographies.each do |t| %>
-      <li><%= t.title %></li>
-  <% end %>
-  </ul>
+<%end%>
 
 </table>
 <%= link_to 'New Typography', new_typography_path %>

@@ -1,0 +1,14 @@
+<h1>Users</h1>
+<table>
+  <thead>
+    <tr>
+      <% @users.each do |user| %>
+      <td>
+        Email: <%= user.email %>
+        Uploader: <%= user.uploader %>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td> 
+      </td>
+    </tr>
+    <% end %>
+  </thead>
+</table>

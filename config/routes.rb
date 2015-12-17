@@ -9,4 +9,6 @@ Rails.application.routes.draw do
     get "sign_up", to: "devise/registrations#new"
     delete "sign_out", to: "devise/sessions#destroy"
   end
+  resources :users, only: [:index, :edit, :update]
+
 end

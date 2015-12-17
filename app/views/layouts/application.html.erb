@@ -12,6 +12,7 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <% if user_signed_in? %>
+    <p>You are signed in as: <%= current_user.email %></p>
     <%= link_to "typography", typographies_path %><br/>
     <%= link_to "sign_out", sign_out_path,  method: "delete"%>
   <% else %>

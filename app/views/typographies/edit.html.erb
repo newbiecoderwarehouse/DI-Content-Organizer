@@ -1,6 +1,15 @@
 <h1>Editing Typography</h1>
-
-<%= render 'form' %>
+<% if current_user.admin? %>
+<%= render 'adminForm' %>
 
 <%= link_to 'Show', @typography %> |
 <%= link_to 'Back', typographies_path %>
+
+<% elsif current_user.uploader? %>
+<%= render 'uploaderForm' %>
+
+<% else %>
+  <%= render 'message/noaccess' %>
+  <% end %>
+  
+  <%= link_to 'Back', typographies_path %>

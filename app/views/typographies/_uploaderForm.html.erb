@@ -23,12 +23,16 @@
     <%= f.label :source %><br>
     <%= f.text_field :source %>
   </div>
-  <div class="field">
-  <%= f.label :include %><br>
-  <%= f.check_box :include, {}, "yes", "no" %>
-</div>
-  
+  <% if @typography.include == "no" %>
   <div class="actions">
     <%= f.submit %>
   </div>
+<% else%>
+<strong>Once it's approved, you cannot edit anymore</strong>
+<p>If you think there's an issue with this api, email the admin</p>
+<% end %>
+  
+  
+  
+  
 <% end %>

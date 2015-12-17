@@ -30,7 +30,7 @@ include: "no"
 
 
 tonkec = User.create!(
-email: "tonkec@changeit.com", 
+email: "antonija1023@gmail.com", 
 password: "delta888",
 password_confirmation: "delta888",
 admin: true,

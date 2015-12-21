@@ -23,6 +23,10 @@
     <%= f.label :source %><br>
     <%= f.text_field :source %>
   </div>
+   <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
   <% if @typography.include == "no" %>
   <div class="actions">
     <%= f.submit %>

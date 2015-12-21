@@ -25,9 +25,13 @@
   </div>
   
   <div class="field">
-  <%= f.label :include %><br>
-  <%= f.check_box :include, {}, "yes", "no" %>
-</div>
+    <%= f.label :include %><br>
+    <%= f.check_box :include, {}, "yes", "no" %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

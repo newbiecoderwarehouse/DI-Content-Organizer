@@ -74,6 +74,6 @@
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def typography_params
-      params.require(:typography).permit(:title, :url, :source, :include, :admin)
+      params.require(:typography).permit(:title, :url, :source, :include, :admin, :image)
     end
  end

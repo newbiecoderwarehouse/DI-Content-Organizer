@@ -20,6 +20,10 @@
   <%= @typography.include %>
 </p>
 
+<p>
+  <%= image_tag @typography.image_url.to_s %>
+</p>
+
 <%= render 'message/apiEdit' %>
 
 <%= link_to 'Edit', edit_typography_path(@typography) %> |

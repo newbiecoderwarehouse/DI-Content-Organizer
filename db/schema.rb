@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151217070059) do
+ActiveRecord::Schema.define(version: 20151221185713) do
 
   create_table "typographies", force: :cascade do |t|
     t.string   "title"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20151217070059) do
     t.datetime "updated_at",                null: false
     t.string   "include",    default: "no"
     t.integer  "user_id"
+    t.string   "image"
   end
 
   add_index "typographies", ["user_id"], name: "index_typographies_on_user_id"

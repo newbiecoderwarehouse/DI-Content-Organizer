@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing All Typographies</h1>
-<%if @current_user.uploader? %>
+<%if !@current_user.nil? && @current_user.approved == true %>
 <%= render 'content' %>
 <% else %>
 <%= render 'message/noaccess' %>

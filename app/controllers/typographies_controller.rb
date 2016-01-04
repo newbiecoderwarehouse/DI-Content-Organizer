@@ -1,5 +1,6 @@
  class TypographiesController < ApplicationController 
   before_action :set_typography, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /typographies
   # GET /typographies.json

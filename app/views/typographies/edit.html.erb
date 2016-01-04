@@ -5,7 +5,7 @@
 <%= link_to 'Show', @typography %> |
 <%= link_to 'Back', typographies_path %>
 
-<% elsif current_user.uploader? %>
+<% elsif current_user.approved? %>
 <%= render 'uploaderForm' %>
 
 <% else %>

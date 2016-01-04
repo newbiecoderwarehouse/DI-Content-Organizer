@@ -34,7 +34,7 @@ email: "antonija1023@gmail.com",
 password: "delta888",
 password_confirmation: "delta888",
 admin: true,
-uploader: true
+approved: true
 )
 #IS ADMIN
 #CAN UPLOAD = CAN ADD API CONTENT
@@ -44,7 +44,7 @@ email: "rickagz@gmail.com",
 password: "delta888", 
 password_confirmation: "delta888",
 admin: true,
-uploader: true
+approved: true
 )
 #IS ADMIN
 #CAN UPLOAD = CAN ADD API CONTENT
@@ -56,7 +56,7 @@ email: "register@example.com",
 password: "delta888", 
 password_confirmation: "delta888",
 admin: false,
-uploader: false
+approved: false
 )
 # register-only 
 # NOT admin
@@ -67,7 +67,7 @@ email: "newbie@example.com",
 password: "delta888", 
 password_confirmation: "delta888",
 admin: false,
-uploader: true
+approved: true
 )
 
 #newbie 

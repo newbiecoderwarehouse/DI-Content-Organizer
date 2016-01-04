@@ -15,3 +15,10 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore application configuration
+/config/application.yml
+
+#Ignore image uploads in the dev environment
+/public/uploads/*
+mkmf.log

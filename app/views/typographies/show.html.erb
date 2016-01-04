@@ -20,9 +20,21 @@
   <%= @typography.include %>
 </p>
 
+<% if !@typography.image_url %>
+<strong>* This record has NO IMAGE</strong>. You need to upload an image.*
+<% end %>
+<h4>Thumb:</h4>
 <p>
-  <%= image_tag @typography.image_url.to_s %>
+  <%= image_tag (@typography.image_url(:thumb).to_s) %>
 </p>
+
+<h4>Preview:</h4>
+<p>
+  <%= image_tag (@typography.image_url(:preview).to_s) %>
+</p>
+
+<h4>Full Image</h4>
+<%= link_to "View in new window", @typography.image_url(:full).to_s, target: '_blank' %> <br> <br>
 
 <%= render 'message/apiEdit' %>
 

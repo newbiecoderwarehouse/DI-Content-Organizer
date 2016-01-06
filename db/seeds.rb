@@ -1,23 +1,3 @@
-unapproved = Typography.create!(
-title: "This one should never be approved",
-url: "invalidurl.c",
-source: "Does not know source",
-user_id: 2,
-include: "no"
-)
-
-# Unapproved seeds are assigned to Rick.
-# Never approve his seeds.
-
-awaitingApproval = Typography.create!(
-title: "Newbie to be approved (default include: no, in seed)",
-url: "http://rxsharp.github.io/my-snapfile/images/menu-icon.svg",
-source: "http://rxsharp.github.io/my-snapfile/images/menu-icon.svg",
-user_id: 4,
-include: "no"
-)
-
-
 tonkec = User.create!(
 email: "antonija1023@gmail.com", 
 password: "delta888",

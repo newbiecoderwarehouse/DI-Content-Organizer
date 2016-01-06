@@ -10,8 +10,6 @@
     <tr>
       <% @typographies.each do |t| %>
       <td><%= t.title %></td>
-      <td><img src= "<%= t.url %>" width="150" height="150" /></td>
-      <td><%= t.source %></td>
       <td>Included:<%= t.include %></td>
       <td>User email: <%= t.user.email %></td>
       <%if @current_user.admin? %>
@@ -33,8 +31,6 @@
     <tr>
       <% @unapproved_typographies.each do |t| %>
       <td><%= t.title %></td>
-      <td><img src= "<%= t.url %>" width="150" height="150" /></td>
-      <td><%= t.source %></td>
       <td>Included:<%= t.include %></td>
       <td><%= link_to 'Edit', edit_typography_path(t) %></td> 
       <td><%= link_to 'Destroy', t, method: :delete, data: { confirm: 'Are you sure?' } %></td     

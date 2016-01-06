@@ -1,7 +1,10 @@
+<div style="border: 2px solid black; text-align:right; padding-right: 10px;">
 <h2>Stats</h2>
 <p>Approved: <%= @approved_typographies.count %></p>
 <p>Unapproved: <%= @unapproved_typographies.count %></p>
 <p>Total: <%= @typographies.count %></p>
+</div>
+<h1>All API Content</h1>
 <table>
   <thead>
     <tr>
@@ -24,7 +27,7 @@
 
 <br>
 <%if @current_user.admin? %>
-<strong>Admin Section | Unapproved/Awaiting Approval</strong>
+<h1>Admin Section | Unapproved/Awaiting Approval</h1>
 <table>
   <thead>
     <tr>

@@ -35,7 +35,7 @@ storage :fog
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process :resize_to_fit => [32, 32]
+    process :resize_to_fit => [640, 480]
   end
 
   version :preview do
@@ -43,7 +43,7 @@ storage :fog
   end
 
   version :full do
-    process :resize_to_fit => [2048, 2048]
+    process :resize_to_fit => [1920, 1080]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

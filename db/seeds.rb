@@ -1,14 +1,3 @@
-require 'open-uri'
-url = open("http://newbiecoderwarehouse.github.io/design-inspiration-api/apis/typography.json").read
-json_data = JSON.parse(url)
-@content = json_data["results"]
-@content.each do |x|
-  Typography.create!(:title => x["title"], :url => x["link"], :source => x["source"], :user_id => 1, :include => "yes")
-end
-
-# user_id is set to one so that all of these come from tonkec
-# All of the filler API content is included.
-
 unapproved = Typography.create!(
 title: "This one should never be approved",
 url: "invalidurl.c",

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'apis', to: "apis#index"
+  get 'apis/index'
+  get 'apis/typography'
   get 'static_pages/home'
 
   devise_for :users

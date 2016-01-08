@@ -7,19 +7,51 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container">
 
- <%= yield %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <% if user_signed_in? %>
+<div class="menuPanel">
+
+     <% if user_signed_in? %>
+<div class="loginBox">
     <p>You are signed in as: <%= current_user.email %></p>
-    <%= link_to "typography", typographies_path %><br/>
     <%= link_to "sign_out", sign_out_path,  method: "delete"%>
+</div>   
   <% else %>
+<div class="loginBox">
+    <p>You are currently not signed in</p>
     <%= link_to "sign_in", sign_in_path %>
     <%= link_to "sign_up", sign_up_path %>
-  <%end %> 
- 
-  <%= debug(params) if Rails.env.development? %>
+</div>
+  <%end %>
+      <!--<strong>Content Types</strong>-->
+    <div class="contentList">
+      <h4>Content Types</h4>
+      <ul>
+        <li><%= link_to "Code Snippets", root_path %><br/></li>
+        <li><%= link_to "Color Palettes", root_path %><br/></li>
+        <li><%= link_to "Hi Def Images", root_path %><br/></li>
+        <li><%= link_to "One Page", root_path %><br/></li>
+        <li><%= link_to "Typography", typographies_path %><br/></li>
+        <li><%= link_to "UxUi", root_path %><br/></li>
+      </ul>
+    </div>
+  <div class="mainMenu">
+    <h4>Main Menu</h4>
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+    </ul>
+  </div>
+</div>
+
+<div class="mainPanel">
+  <div class="mainContent">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </div>
+</div>
+
+
+</div>
 </body>
 </html>

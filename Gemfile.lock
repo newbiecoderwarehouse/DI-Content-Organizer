@@ -202,6 +202,7 @@ GEM
     multi_json (1.11.2)
     nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
+    normalize-rails (3.0.3)
     orm_adapter (0.5.0)
     pg (0.17.1)
     rack (1.6.4)
@@ -292,6 +293,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mini_magick (~> 4.3, >= 4.3.6)
+  normalize-rails
   pg (= 0.17.1)
   rails (= 4.2.4)
   rails_12factor (= 0.0.2)
